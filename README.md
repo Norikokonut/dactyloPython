@@ -1,6 +1,6 @@
 # dactyloPython
 
-## A dactylotest made in python with random french words 🎲 🇫🇷
+## A dactylotest made in python with random french words 🇫🇷
 
 This is a dactylotest like monkeytype but made in python.
 It will use random words and give the time you made and your score at the end.
