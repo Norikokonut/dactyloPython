@@ -12,15 +12,8 @@ def randomWord():
 
     mots = []
     page = page.split('\n')
-    mots.append(page[133])
-    mots.append(page[148])
-    mots.append(page[163])
-    mots.append(page[178])
-    mots.append(page[193])
-    mots.append(page[208])
-    mots.append(page[223])
-    mots.append(page[238])
-    mots.append(page[253])
-    mots.append(page[268])
+    lines = [133,148,163,178,193,208,223,238,253,268]
+    for line in lines:
+        mots.append(page[line])
     
     return mots
