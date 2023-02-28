@@ -12,6 +12,7 @@ for i in range(nb10mots):
         words += random_words[j].lower() + " "
     print("■"*i+"□"*(10-i),str(i)+"0%",end="\r")    
 
+os.system('cls' if os.name == 'nt' else 'clear')
 print('\033[31m'+"|"+'\033[0m'+words)
 
 while keyboard.getch() == words[0]:
@@ -28,4 +29,4 @@ while time.perf_counter() < timer+30:
             right = True
             pos +=1
 
-print(int(pos*2)+" letter per mimutes")
+print(str(pos*2)+" letter per minutes")
