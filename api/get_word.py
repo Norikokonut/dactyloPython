@@ -6,12 +6,21 @@ def randomWord():
         'Accept-Encoding': 'none',
         'Accept-Language': 'en-US,en;q=0.8',
         'Connection': 'keep-alive'}
-    req = url.Request("https://www.palabrasaleatorias.com/mots-aleatoires.php?fs=1&fs2=0&Submit=Nouveau+mot", headers=hdr)
+    req = url.Request("https://www.palabrasaleatorias.com/mots-aleatoires.php?fs=10&fs2=0&Submit=Nouveau+mot", headers=hdr)
     page = url.urlopen(req)
     page = page.read().decode("utf-8")
 
-    start_index = 14164
-    end_index = page.find('Chercher la signification en:')-17
-    title = page[start_index:end_index]
-
-    return title
+    mots = []
+    page = page.split('\n')
+    mots.append(page[133])
+    mots.append(page[148])
+    mots.append(page[163])
+    mots.append(page[178])
+    mots.append(page[193])
+    mots.append(page[208])
+    mots.append(page[223])
+    mots.append(page[238])
+    mots.append(page[253])
+    mots.append(page[268])
+    
+    return mots
