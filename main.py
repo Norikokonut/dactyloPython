@@ -17,7 +17,7 @@ def dactylo(nb_mots,Time):
         print("■"*i+"□"*(10-i),str(i)+"0%",end="\r")    
 
     os.system('cls' if os.name == 'nt' else 'clear')
-    print('\033[31m'+"|"+'\033[0m'+words)
+    print('\033[0m'+words)
 
     if Time == True:
         while True:
@@ -28,7 +28,7 @@ def dactylo(nb_mots,Time):
                     timer = time.perf_counter()
                 if inp == words[pos]:
                     os.system('cls' if os.name == 'nt' else 'clear')
-                    print(words[:pos+1]+'\033[31m'+"|"+'\033[0m'+words[pos+1:])
+                    print('\033[32m'+words[:pos+1]+'\033[33m'+words[pos+1]+'\033[0m'+words[pos+2:])
                     right = True
                     pos +=1
                 else:
@@ -50,7 +50,7 @@ def dactylo(nb_mots,Time):
                     timer = time.perf_counter()
                 if inp == words[pos]:
                     os.system('cls' if os.name == 'nt' else 'clear')
-                    print(words[:pos+1]+'\033[31m'+"|"+'\033[0m'+words[pos+1:])
+                    print('\033[32m'+words[:pos+1]+'\032[0m'+words[pos+1]+'\033[0m'+words[pos+2:])
                     right = True
                     pos +=1
                 else:
