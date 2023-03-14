@@ -6,7 +6,7 @@ This is a dactylotest like monkeytype but made in python.
 It will use random words and give the time you made and your score at the end.
 
 ## Setup 🖥️
-
+Just have to launch `main.py`
 
 ## ⚠️ Warning ⚠️
 
