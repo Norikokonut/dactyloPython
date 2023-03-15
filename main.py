@@ -14,7 +14,7 @@ def dactylo(nb_mots,Time):
         random_words = word.randomWord()
         for j in range(10):
             words += random_words[j].lower() + " "
-        print("■"*i+"□"*(10-i),str(i)+"0%",end="\r")    
+        print('\033[32m'+"■"*i+'\033[31m'+"□"*(10-i)+'\033[0m'+" "+str(i)+"0%",end="\r")    
 
     os.system('cls' if os.name == 'nt' else 'clear')
     print('\033[0m'+words)
