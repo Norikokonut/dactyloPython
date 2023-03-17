@@ -3,7 +3,7 @@ import api.getch as keyboard
 import os
 import time 
 
-def dactylo(nb_mots,Time):
+def dactylo(nb_mots,Time,lang):
     words = ""
     pos = 0
     error = 0
@@ -11,7 +11,7 @@ def dactylo(nb_mots,Time):
 
 
     for i in range(nb_mots):
-        random_words = word.randomWord()
+        random_words = word.randomWord(lang)
         for j in range(10):
             words += random_words[j].lower() + " "
         print('\033[32m'+"■"*i+'\033[31m'+"□"*(10-i)+'\033[0m'+" "+str(i)+"0%",end="\r")    
@@ -62,12 +62,22 @@ def dactylo(nb_mots,Time):
         print(str((wpm))+" wpm")
 
 
+
+print("(F)rançais / (E)nglish")
+while True:
+    inp = keyboard.getch()
+    if inp == "e":
+        lang='en'
+        break
+    elif inp == "f":
+        lang='fr'
+        break
 print("(T)ime / (W)ords")
 while True:
     inp = keyboard.getch()
     if inp == "t":
-        dactylo(10,True)
+        dactylo(10,True,lang)
         break
     elif inp == "w":
-        dactylo(1,False)
+        dactylo(1,False,lang)
         break
