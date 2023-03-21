@@ -1,3 +1,5 @@
+#!/bin/python3
+
 import api.get_word as word
 import api.getch as keyboard
 import os

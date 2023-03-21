@@ -7,8 +7,17 @@ It will use random words and give the time you made and your score at the end.
 The text will change of color (it'll be green when it's done and the letter you have to type will be in yellow).
 
 ## Setup 🖥️
-Just have to launch `main.py`.
-Choose the language and the type mod by using your keyboard.
+
+### Linux 🐧
+Open a terminal on the folder.
+Use the command `./main.py`
+Choose the language and the type mod by using your keyboard (f/e and t/w).
+
+### Windows 🪟
+
+Open a command line on the folder.
+Use the command `python3 main.py` 
+Choose the language and the type mod by using your keyboard (f/e and t/w).
 
 ## ⚠️ Warning ⚠️
 
