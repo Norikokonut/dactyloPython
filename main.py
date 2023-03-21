@@ -8,7 +8,6 @@ import time
 def dactylo(nb_mots,Time,lang):
     words = ""
     pos = 0
-    error = 0
     timer = None
 
 
@@ -33,12 +32,10 @@ def dactylo(nb_mots,Time,lang):
                     print('\033[32m'+words[:pos+1]+'\033[33m'+words[pos+1]+'\033[0m'+words[pos+2:])
                     right = True
                     pos +=1
-                else:
-                    error += 1
             if time.perf_counter() > timer + 30:
                 break
 
-        wpm = round((pos-error)/2.5)
+        wpm = round((pos)/2.5)
         if wpm<0:
             wpm = 0
         print(str(wpm)+" wpm")
@@ -54,10 +51,8 @@ def dactylo(nb_mots,Time,lang):
                     os.system('cls' if os.name == 'nt' else 'clear')
                     print('\033[32m'+words[:pos+1]+'\033[33m'+words[pos+1]+'\033[0m'+words[pos+2:])
                     right = True
-                else:
-                    error += 1
         temps = round(time.perf_counter()-timer,1)
-        wpm = round((pos-error)*12/temps)
+        wpm = round((pos)*12/temps)
         if wpm<0:
             wpm = 0
         print(str(temps)+"s")
