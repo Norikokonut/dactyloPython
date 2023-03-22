@@ -8,7 +8,7 @@ The text will change of color (it'll be green when it's done and the letter you 
 
 ## Setup 🖥️
 
-### Linux 🐧
+### Mac 🍎 / Linux 🐧
 Open a terminal on the folder.
 Use the command `./main.py`
 Choose the language and the type mod by using your keyboard (f/e and t/w).
