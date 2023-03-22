@@ -1,5 +1,5 @@
 """
-Ce module permet de demander à l'utilisateur un seul caratère sur l'entrée standart (input)
+This module need an input and return it
 """
 
 class _Getch:
